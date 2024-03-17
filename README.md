@@ -47,27 +47,27 @@ O projeto consiste em um sistema Python que integra dados sobre bancos e unidade
 
 ## Ambiente Virtual 🌐
 
-Criar ambiente:
+#### Criar ambiente:
 
 - virtualenv nome_do_ambiente
 
-Ativar ambiente virtual:
+#### Ativar ambiente virtual:
 
 - .\nome_do_ambiente\Scripts\Activate.ps1
 
-Verificar se o ambiente está ativado:
+#### Verificar se o ambiente está ativado:
 - Get-Command python
 
 ## Banco de Dados 🗃️
 
-O projeto utiliza o banco de dados SQLite para armazenar os dados obtidos das APIs públicas do Brasil. Após a extração e o tratamento dos dados, eles são transformados em DataFrames e, em seguida, salvos no banco de dados SQLite utilizando a função to_sql do pandas.
+- O projeto utiliza o banco de dados SQLite para armazenar os dados obtidos das APIs públicas do Brasil. Após a extração e o tratamento dos dados, eles são transformados em DataFrames e, em seguida, salvos no banco de dados SQLite utilizando a função to_sql do pandas.
 
-### Operações Realizadas:
+#### Operações Realizadas:
 
 - Transformação dos dados em DataFrames.
 - Salvamento dos dados no banco de dados SQLite utilizando a função to_sql do pandas.
 
-### Extensão Utilizada:
+#### Extensão Utilizada:
 
 - A extensão "SQLite3 Editor" no VSCode foi utilizada para visualizar e gerenciar o banco de dados SQLite.
 
