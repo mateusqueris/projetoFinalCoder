@@ -1,6 +1,8 @@
 # Projeto Final Python CoderHouse 🐍
 
-Projeto Final de conclusão do curso de Python da plataforma CoderHouse. Turma 54375 Trabalho em equipe pelos alunos: Mateus Queris, Nathalia Bertos e Nicole Moraes Graniço.
+Projeto Final de conclusão do curso de Python da plataforma CoderHouse. 
+Alunos: Mateus Queris, Nathalia Bertos e Nicole Moraes Graniço.
+Este projeto foi desenvolvido como parte do curso de Python da CoderHouse, Turma 54375. 🎓
 
 ## Descrição do Projeto 🚀
 
@@ -20,14 +22,14 @@ O projeto consiste em um sistema Python que integra dados sobre bancos e unidade
 - sqlite3
 - plyer
 
-pip install requests
-pip install pandas
-pip install sqlite3
-pip install plyer
-API Escolhida 🌐
-API escolhida: Brasil API(1.0.0)
+Instalação:
 
-## Documentação Brasil API
+- pip install requests
+- pip install pandas
+- pip install sqlite3
+- pip install plyer
+
+## Documentação Brasil API(1.0.0) 🌐
 
  Endpoints utilizados:
  Bancos: https://brasilapi.com.br/api/banks/v1
@@ -37,23 +39,23 @@ API escolhida: Brasil API(1.0.0)
 ## Tratamento e Manipulação dos Dados 🛠️
 Exemplo de Tratamento:
 
-# Renomeação de colunas
+Renomeação de colunas
 df.rename(columns={'ispb': 'ISPB', 'name': 'Nome', 'code': 'Código', 'fullName': 'Nome Banco'}, inplace=True)
 
-# Conversão de tipos de dados
+Conversão de tipos de dados
 df['Código'] = df['Código'].astype('Int64')
 
-# Preenchimento de valores ausentes
+Preenchimento de valores ausentes
 df.fillna({'Código': 0, 'Nome Banco': 'Sem nome'}, inplace=True)
 
-# Transformações de strings
+Transformações de strings
 df['Nome'] = df['Nome'].str.upper()
 df['Nome Banco'] = df['Nome Banco'].str.title()
 
-# Armazenamento dos dados em bancos de dados SQLite
+Armazenamento dos dados em bancos de dados SQLite
 df.to_sql('df', conn, if_exists='replace', index=False)
 
-## Ambiente Virtual 🌐
+# Ambiente Virtual 🌐
 
 ### Para criar e ativar um ambiente virtual:
 
@@ -83,4 +85,4 @@ O projeto utiliza o banco de dados SQLite para armazenar os dados obtidos das AP
 A extensão "SQLite3 Editor" no VSCode foi utilizada para visualizar e gerenciar o banco de dados SQLite.
 
 
-# Este projeto foi desenvolvido como parte do curso de Python da CoderHouse, Turma 54375. 🎓
+
