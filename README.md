@@ -23,15 +23,12 @@ O projeto consiste em um sistema Python que integra dados sobre bancos e unidade
 - pip install plyer
 
 ## Documentação Brasil API (1.0.0) 🌐
-
- Endpoints utilizados:
- Bancos: https://brasilapi.com.br/api/banks/v1
- Cidade: https://brasilapi.com.br/api/cptec/v1/cidade
- Siglas Estados: https://brasilapi.com.br/api/ibge/uf/v1
+ ### Endpoints utilizados:
+ #### Bancos: https://brasilapi.com.br/api/banks/v1
+ #### Cidade: https://brasilapi.com.br/api/cptec/v1/cidade
+ #### Siglas Estados: https://brasilapi.com.br/api/ibge/uf/v1
 
 ## Tratamento e Manipulação dos Dados 🛠️
-Exemplo de Tratamento:
-
 #### Renomeando de colunas:
 - df.rename(columns={'ispb': 'ISPB', 'name': 'Nome', 'code': 'Código', 'fullName': 'Nome Banco'}, inplace=True)
 
