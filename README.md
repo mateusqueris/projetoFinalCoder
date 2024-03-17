@@ -29,7 +29,7 @@ Instalação:
 - pip install sqlite3
 - pip install plyer
 
-## Documentação Brasil API(1.0.0) 🌐
+## Documentação Brasil API (1.0.0) 🌐
 
  Endpoints utilizados:
  Bancos: https://brasilapi.com.br/api/banks/v1
@@ -39,37 +39,34 @@ Instalação:
 ## Tratamento e Manipulação dos Dados 🛠️
 Exemplo de Tratamento:
 
-Renomeação de colunas
-df.rename(columns={'ispb': 'ISPB', 'name': 'Nome', 'code': 'Código', 'fullName': 'Nome Banco'}, inplace=True)
+Renomeando de colunas:
+- df.rename(columns={'ispb': 'ISPB', 'name': 'Nome', 'code': 'Código', 'fullName': 'Nome Banco'}, inplace=True)
 
-Conversão de tipos de dados
-df['Código'] = df['Código'].astype('Int64')
+Covertendo tipos de dados:
+- df['Código'] = df['Código'].astype('Int64')
 
-Preenchimento de valores ausentes
-df.fillna({'Código': 0, 'Nome Banco': 'Sem nome'}, inplace=True)
+Melhorando valores ausentes:
+- df.fillna({'Código': 0, 'Nome Banco': 'Sem nome'}, inplace=True)
 
-Transformações de strings
-df['Nome'] = df['Nome'].str.upper()
-df['Nome Banco'] = df['Nome Banco'].str.title()
+Transformações de strings:
+- df['Nome'] = df['Nome'].str.upper()
+- df['Nome Banco'] = df['Nome Banco'].str.title()
 
-Armazenamento dos dados em bancos de dados SQLite
-df.to_sql('df', conn, if_exists='replace', index=False)
+Armazenamento dos dados em bancos de dados SQLite:
+- df.to_sql('df', conn, if_exists='replace', index=False)
 
-# Ambiente Virtual 🌐
+## Ambiente Virtual 🌐
 
-### Para criar e ativar um ambiente virtual:
+Criar ambiente:
 
-# Criar ambiente
-virtualenv nome_do_ambiente
+- virtualenv nome_do_ambiente
 
-# Navegar para a pasta do projeto
-cd projeto_final-main
+Ativar ambiente virtual:
 
-# Ativar ambiente virtual
-.\nome_do_ambiente\Scripts\Activate.ps1
+- .\nome_do_ambiente\Scripts\Activate.ps1
 
-# Verificar se o ambiente está ativado
-Get-Command python
+Verificar se o ambiente está ativado:
+- Get-Command python
 
 ## Banco de Dados 🗃️
 
@@ -82,7 +79,6 @@ O projeto utiliza o banco de dados SQLite para armazenar os dados obtidos das AP
 
 ### Extensão Utilizada:
 
-A extensão "SQLite3 Editor" no VSCode foi utilizada para visualizar e gerenciar o banco de dados SQLite.
-
+- A extensão "SQLite3 Editor" no VSCode foi utilizada para visualizar e gerenciar o banco de dados SQLite.
 
 
