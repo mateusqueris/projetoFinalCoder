@@ -25,31 +25,31 @@ O projeto consiste em um sistema Python que integra dados sobre bancos e unidade
  #### Siglas Estados: https://brasilapi.com.br/api/ibge/uf/v1
 
 ## Tratamento e Manipulação dos Dados 🛠️
-#### Renomeando de colunas:
-- df.rename(columns={'ispb': 'ISPB', 'name': 'Nome', 'code': 'Código', 'fullName': 'Nome Banco'}, inplace=True)
+#### Renomeando de colunas: 
+df.rename(columns={'ispb': 'ISPB', 'name': 'Nome', 'code': 'Código', 'fullName': 'Nome Banco'}, inplace=True)
 
 #### Covertendo tipos de dados:
-- df['Código'] = df['Código'].astype('Int64')
+df['Código'] = df['Código'].astype('Int64')
 
 #### Melhorando valores ausentes:
-- df.fillna({'Código': 0, 'Nome Banco': 'Sem nome'}, inplace=True)
+df.fillna({'Código': 0, 'Nome Banco': 'Sem nome'}, inplace=True)
 
 #### Transformações de strings:
-- df['Nome'] = df['Nome'].str.upper()
-- df['Nome Banco'] = df['Nome Banco'].str.title()
+df['Nome'] = df['Nome'].str.upper()
+df['Nome Banco'] = df['Nome Banco'].str.title()
 
 #### Armazenamento dos dados em bancos de dados SQLite:
-- df.to_sql('df', conn, if_exists='replace', index=False)
+df.to_sql('df', conn, if_exists='replace', index=False)
 
 ## Ambiente Virtual 🌐
 #### Criar ambiente:
-- virtualenv nome_do_ambiente
+virtualenv nome_do_ambiente
 
 #### Ativar ambiente virtual:
-- .\nome_do_ambiente\Scripts\Activate.ps1
+.\nome_do_ambiente\Scripts\Activate.ps1
 
 #### Verificar se o ambiente está ativado:
-- Get-Command python
+Get-Command python
 
 ## Banco de Dados 🗃️
 
