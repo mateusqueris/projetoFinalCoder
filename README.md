@@ -32,20 +32,20 @@ O projeto consiste em um sistema Python que integra dados sobre bancos e unidade
 ## Tratamento e Manipulação dos Dados 🛠️
 Exemplo de Tratamento:
 
-Renomeando de colunas:
+#### Renomeando de colunas:
 - df.rename(columns={'ispb': 'ISPB', 'name': 'Nome', 'code': 'Código', 'fullName': 'Nome Banco'}, inplace=True)
 
-Covertendo tipos de dados:
+#### Covertendo tipos de dados:
 - df['Código'] = df['Código'].astype('Int64')
 
-Melhorando valores ausentes:
+#### Melhorando valores ausentes:
 - df.fillna({'Código': 0, 'Nome Banco': 'Sem nome'}, inplace=True)
 
-Transformações de strings:
+#### Transformações de strings:
 - df['Nome'] = df['Nome'].str.upper()
 - df['Nome Banco'] = df['Nome Banco'].str.title()
 
-Armazenamento dos dados em bancos de dados SQLite:
+#### Armazenamento dos dados em bancos de dados SQLite:
 - df.to_sql('df', conn, if_exists='replace', index=False)
 
 ## Ambiente Virtual 🌐
