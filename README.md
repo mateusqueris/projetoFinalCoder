@@ -29,7 +29,7 @@ API escolhida: Brasil API(1.0.0)
 
 ## Documentação Brasil API
 
-## Endpoints utilizados:
+ Endpoints utilizados:
  Bancos: https://brasilapi.com.br/api/banks/v1
  Cidade: https://brasilapi.com.br/api/cptec/v1/cidade
  Siglas Estados: https://brasilapi.com.br/api/ibge/uf/v1
