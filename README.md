@@ -17,13 +17,6 @@ O projeto consiste em um sistema Python que integra dados sobre bancos e unidade
 
 ## Bibliotecas Necessárias 📚
 
-- requests
-- pandas
-- sqlite3
-- plyer
-
-  Instalação:
-
 - pip install requests
 - pip install pandas
 - pip install sqlite3
