@@ -1,8 +1,8 @@
 # Projeto Final Python CoderHouse 🐍
 
 Projeto Final de conclusão do curso de Python da plataforma CoderHouse. 
-Alunos: Mateus Queris, Nathalia Bertos e Nicole Moraes Graniço.
-Este projeto foi desenvolvido como parte do curso de Python da CoderHouse, Turma 54375. 🎓
+- Alunos: Mateus Queris, Nathalia Bertos e Nicole Moraes Graniço.
+- Este projeto foi desenvolvido como parte do curso de Python da CoderHouse, Turma 54375. 🎓
 
 ## Descrição do Projeto 🚀
 
@@ -60,7 +60,7 @@ O projeto consiste em um sistema Python que integra dados sobre bancos e unidade
 
 ## Banco de Dados 🗃️
 
-- O projeto utiliza o banco de dados SQLite para armazenar os dados obtidos das APIs públicas do Brasil. Após a extração e o tratamento dos dados, eles são transformados em DataFrames e, em seguida, salvos no banco de dados SQLite utilizando a função to_sql do pandas.
+O projeto utiliza o banco de dados SQLite para armazenar os dados obtidos das APIs públicas do Brasil. Após a extração e o tratamento dos dados, eles são transformados em DataFrames e, em seguida, salvos no banco de dados SQLite utilizando a função to_sql do pandas.
 
 #### Operações Realizadas:
 
