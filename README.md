@@ -1,22 +1,18 @@
 # Projeto Final Python CoderHouse 🐍
-
 Projeto Final de conclusão do curso de Python da plataforma CoderHouse. 
 - Alunos: Mateus Queris, Nathalia Bertos e Nicole Moraes Graniço.
 - Este projeto foi desenvolvido como parte do curso de Python da CoderHouse, Turma 54375. 🎓
 
 ## Descrição do Projeto 🚀
-
 O projeto consiste em um sistema Python que integra dados sobre bancos e unidades federativas do Brasil de APIs públicas. Realizado como exercício final do curso de Python da CoderHouse.
 
 ## Funcionalidades 🛠️
-
 1. Extração de dados de APIs públicas.
 2. Tratamento e manipulação dos dados coletados.
 3. Armazenamento dos dados em banco de dados SQLite.
 4. Notificação de sucesso ou falha na extração e tratamento dos dados.
 
 ## Bibliotecas Necessárias 📚
-
 - pip install requests
 - pip install pandas
 - pip install sqlite3
@@ -46,13 +42,10 @@ O projeto consiste em um sistema Python que integra dados sobre bancos e unidade
 - df.to_sql('df', conn, if_exists='replace', index=False)
 
 ## Ambiente Virtual 🌐
-
 #### Criar ambiente:
-
 - virtualenv nome_do_ambiente
 
 #### Ativar ambiente virtual:
-
 - .\nome_do_ambiente\Scripts\Activate.ps1
 
 #### Verificar se o ambiente está ativado:
