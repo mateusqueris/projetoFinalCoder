@@ -1,154 +1,86 @@
+# Projeto Final Python CoderHouse 🐍
 
-# Proposta do Projeto:
+Projeto Final de conclusão do curso de Python da plataforma CoderHouse. Turma 54375 Trabalho em equipe pelos alunos: Mateus Queris, Nathalia Bertos e Nicole Moraes Graniço.
 
-Projeto Final de conclusão do curso de Python da plataforma CoderHouse. Turma 54375
-Trabalho em equipe pelos alunos: Mateus Queris, Nathalia Bertos e Nicole Moraes Graniço.
+## Descrição do Projeto 🚀
 
-Exercicio 1: Escolher um API da lista disponível, Fazer extração de 3 tabelas, Estar disponível no GITHub.
-Exercicio 2: Realizar o tratamento das bases coletadas via API do projeto final. Ajustar colunas e linhas, filtros de linhas e colunas, unstack/stack, tratamento do tipo das variáveis, ajuste de missing e tratamento de colunas string.
-Exercicio 3: Criar um Virtual Environment e um arquivo README.
+O projeto consiste em um sistema Python que integra dados sobre bancos e unidades federativas do Brasil de APIs públicas. Realizado como exercício final do curso de Python da CoderHouse.
 
-Projeto Python que integra dados sobre bancos e unidades federativas do Brasil de APIs públicas.
+## Funcionalidades 🛠️
 
-## Bibliotecas Necessárias:
+1. Extração de dados de APIs públicas.
+2. Tratamento e manipulação dos dados coletados.
+3. Armazenamento dos dados em banco de dados SQLite.
+4. Notificação de sucesso ou falha na extração e tratamento dos dados.
 
-- Bibliotecas Python: requests, pandas, sqlite3, plyer
-        
-        -> pip install requests
-        -> pip install pandas
-        -> pip install sqlite3
-        -> pip install plyer
-## API Escolhida
+## Bibliotecas Necessárias 📚
 
-API escolhida:
-    BRASIL API(1.0.0)
-        Link documentação Brasil API:
-        https://brasilapi.com.br/docs
-        
-        Bancos:
-        -> https://brasilapi.com.br/api/banks/v1 
+- requests
+- pandas
+- sqlite3
+- plyer
 
-        Cidade:
-        -> https://brasilapi.com.br/api/cptec/v1/cidade
+pip install requests
+pip install pandas
+pip install sqlite3
+pip install plyer
+API Escolhida 🌐
+API escolhida: Brasil API(1.0.0)
 
-        Siglas Estados:
-        -> https://brasilapi.com.br/api/ibge/uf/v1 
+## Documentação Brasil API
 
+## Endpoints utilizados:
+ Bancos: https://brasilapi.com.br/api/banks/v1
+ Cidade: https://brasilapi.com.br/api/cptec/v1/cidade
+ Siglas Estados: https://brasilapi.com.br/api/ibge/uf/v1
 
-## Tratamento e manipulação dos dados:
-    
-    
-    Renomeação de colunas:
-        # Renomeia as colunas do DataFrame
-        df.rename(columns={'ispb': 'ISPB', 'name': 'Nome', 'code': 'Código', 'fullName': 'Nome Banco'}, inplace=True)
+## Tratamento e Manipulação dos Dados 🛠️
+Exemplo de Tratamento:
 
-    Conversão de tipos de dados
-        df['Código'] = df['Código'].astype('Int64')
+# Renomeação de colunas
+df.rename(columns={'ispb': 'ISPB', 'name': 'Nome', 'code': 'Código', 'fullName': 'Nome Banco'}, inplace=True)
 
-    Preenchimento de valores ausentes
-        df.fillna({'Código': 0, 'Nome Banco': 'Sem nome'}, inplace=True)
+# Conversão de tipos de dados
+df['Código'] = df['Código'].astype('Int64')
 
-    Transformações de strings
-        # Transforma todos os valores na coluna 'Nome' em maiúsculas
-        df['Nome'] = df['Nome'].str.upper()
+# Preenchimento de valores ausentes
+df.fillna({'Código': 0, 'Nome Banco': 'Sem nome'}, inplace=True)
 
-        # Transforma a primeira letra de cada palavra na coluna 'Nome Banco' em maiúscula
-        df['Nome Banco'] = df['Nome Banco'].str.title()
+# Transformações de strings
+df['Nome'] = df['Nome'].str.upper()
+df['Nome Banco'] = df['Nome Banco'].str.title()
 
-    Armazenamento dos dados em bancos de dados SQLite
-        # Salva o DataFrame no SQLite
-        df.to_sql('df', conn, if_exists='replace', index=False)
+# Armazenamento dos dados em bancos de dados SQLite
+df.to_sql('df', conn, if_exists='replace', index=False)
 
-    Notificação de sucesso ou falha na extração e tratamento dos dados
+## Ambiente Virtual 🌐
 
-        # Alerta de sucesso
-        notification.notify(
-            title='sucesso',
-            message='Base de dados carregada com sucesso',
-            app_name='Alerta',
-            timeout=10
-        )
-        # Alerta de erro
-        notification.notify(
-            title='erro',
-            message='Falha no carregamento da base de dados',
-            app_name='Alerta',
-            timeout=10
-        )
+### Para criar e ativar um ambiente virtual:
 
-## Github
+# Criar ambiente
+virtualenv nome_do_ambiente
 
-para publicar o projeto no github é necessário o download da aplicação GIT 
-link para download:
-    https://gitforwindows.org/
+# Navegar para a pasta do projeto
+cd projeto_final-main
 
-Comandos para configuração do GIT:
-    
-    Abrir CMD no Windows.
+# Ativar ambiente virtual
+.\nome_do_ambiente\Scripts\Activate.ps1
 
-    Primeiro Comando para verificar se o Git está instalado corretamente: 
-        GIT
+# Verificar se o ambiente está ativado
+Get-Command python
 
-    Segundo Comando para criar usuario:  
-        git config --global user.name "seu nome de usuário"
+## Banco de Dados 🗃️
 
-    Terceiro Comando para vincular e-mail:  
-        git config --global user.email "seuemail@gmail.com"
-    
-    Quarto comando para validar configuração:  
-        git config --list
+O projeto utiliza o banco de dados SQLite para armazenar os dados obtidos das APIs públicas do Brasil. Após a extração e o tratamento dos dados, eles são transformados em DataFrames e, em seguida, salvos no banco de dados SQLite utilizando a função to_sql do pandas.
 
-    Necessario Reiniciar Computador.
-   
-Comandos para subir projeto no Github 
+### Operações Realizadas:
 
-    Abrir Terminal no Vscode
-    git init
-    git status
-    git add temp.txt ou git add .
-    git commit –m “coloque sua mensagem aqui”
+- Transformação dos dados em DataFrames.
+- Salvamento dos dados no banco de dados SQLite utilizando a função to_sql do pandas.
 
-    Acessar Github: 
-    https://github.com/
+### Extensão Utilizada:
 
-    Criar um novo Repositorio
-
-    Utilizar a opção: …or push an existing repository from the command line
-        git remote add origin https://github.com/mateusqueris/projetoFinalCoder.git
-        git branch -M main
-        git push -u origin main
-
-## Virtual Environment
-
-    Criar ambiente:
-        -> virtualenv nome_do_ambiente
+A extensão "SQLite3 Editor" no VSCode foi utilizada para visualizar e gerenciar o banco de dados SQLite.
 
 
-    Navegar pasta projeto
-        -> cd projeto_final-main
-
-    Ativar ambiente virtual 
-        -> .\myenv\Scripts\Activate.ps1
-
-    Verificar se ambiente virtual está ativado:
-        -> Get-Command python
-
-    Exemplo de instalação de biblioteca no Virtual Environment:
-        -> & "$env:VIRTUAL_ENV\Scripts\pip.exe" install pandas
-
-## Banco de dados
-
-
-O projeto utiliza o banco de dados SQLite dentro do ambiente do VSCode para armazenar os dados obtidos da API Brasil. 
-Os dados são transformados em dataframes e, em seguida, inseridos no banco de dados utilizando a função to_sql.
-
-Operações Realizadas:
-
-Os dados são transformados em dataframes e salvos no banco de dados SQLite utilizando a função to_sql.
-
-EX: df2.to_sql('df2', conn, if_exists='replace', index=False)
-
-A conexão com o arquivo projetofinal.db é estabelecida utilizando o módulo sqlite3.
-Extensão Utilizada:
-
-Para visualização e interação com o banco de dados SQLite dentro do VSCode, é recomendada a utilização da extensão "SQLITE3 Editor". 
+# Este projeto foi desenvolvido como parte do curso de Python da CoderHouse, Turma 54375. 🎓
